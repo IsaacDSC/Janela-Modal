@@ -1,32 +1,178 @@
-body {
-    padding: 0;
+body * {
+    padding: 0px;
+    margin: 0;
 }
 
 header {
+    position: relative;
     width: 100%;
     height: 200px;
-    background: rgba(0, 0, 0, 0.123);
+    background: rgba(0, 0, 0, 0.651);
+    top: 0px;
 }
 
 h1 {
-    color: red;
+    line-height: 100px;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+    /*animation: fade 0.2s;*/
+}
+
+a {
+    position: absolute;
+    top: 210px;
+    right: 50px;
+    height: 40px;
+    width: 120px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+a:hover {
+    color: rgba(25, 219, 99, 0.692);
+    font-size: 24px;
+    text-decoration: none;
+    transition: 1s;
+    /*transition: fade 0.5s;*/
+}
+
+.janela ul li {
+    display: inline-block;
+    margin-left: 400px;
+    font-size: 26px;
+    margin-top: 25px;
+}
+
+
+/* =========================================JANELA MODAL=====================================================*/
+
+#modal {
+    position: absolute;
+    height: 400px;
+    width: 500px;
+    left: 30%;
+    top: 25%;
+    border-radius: 20px;
+}
+
+#modal h2 {
+    color: white;
     text-align: center;
 }
 
-button {
-    height: 40px;
-    width: 120px;
-    background: rgba(0, 0, 255, 0.411);
-    border: none;
+#modal hr {
+    width: 250px;
+    height: 2px;
+    margin-left: 25%;
+    border-radius: 20px;
+    background: yellow;
+}
+
+.area-modal input {
+    border-radius: 20px;
+    border: solid white 2px;
+    background: rgba(53, 53, 53, 0.8);
+    left: 15px;
+    position: relative;
+    height: 35px;
+    text-align: center;
+    color: yellow;
+    width: 300px;
+}
+
+.area-modal button {
     border-radius: 10px;
-    cursor: pointer;
+    width: 100px;
+    height: 35px;
+    margin-left: 40%;
+    border: none;
+    background: yellow;
 }
 
-button:hover {
-    background: rgba(0, 0, 255, 0.705);
+.area-modal button:hover {
+    background: orangered;
 }
 
-.modal-container {
+.area-modal #dd {
+    width: 50px;
+}
+
+#modal ul li {
+    display: block;
+    margin-left: 100px;
+    margin-top: 5px;
+}
+
+.area-modal select {
+    width: 140px;
+    height: 40px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.modalDialog {
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    opacity: 0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+}
+
+.modalDialog:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modalDialog .areamodal {
+    width: 400px;
+    height: 200px;
+    position: relative;
+    top: 200px;
+    /*  margin: 30% auto;
+   padding: 5px 20px 13px 20px;*/
+    border-radius: 10px;
+    border: solid black 2px;
+    background: #fff;
+}
+
+.closeModal {
+    background: #606061;
+    color: #FFFFFF;
+    line-height: 25px;
+    position: absolute;
+    right: 0px;
+    text-align: center;
+    top: -15px;
+    width: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    -moz-box-shadow: 1px 1px 3px #000;
+    -webkit-box-shadow: 1px 1px 3px #000;
+    box-shadow: 1px 1px 3px #000;
+}
+
+.closeModal:after {
+    content: "\d7";
+}
+
+.closeModal:hover {
+    background: #f00;
+}
+
+
+/*.modal-container {
     width: 100vw;
     height: 100vh;
     position: fixed;
@@ -45,4 +191,4 @@ button:hover {
     min-width: 300px;
     padding: 40px;
     border: 10px solid black;
-}
+}*/
