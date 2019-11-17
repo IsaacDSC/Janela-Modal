@@ -1,89 +1,44 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Janela Modalt</title>
-    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
 </head>
+<style>
+    .parte-escura {
+        height: 100%;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.75);
+        position: fixed;
+        z-index: 9999;
+        top: -100%;
+        display: block;
+        transition: 350ms;
+    }
+    
+    .janela-modal {
+        width: 50%;
+        height: 60%;
+        background: black;
+        border: 1px solid whitesmoke;
+        border-radius: 20px;
+        margin: 80px auto 0 auto;
+    }
+</style>
 
 <body>
-    <header>
-        <h1>Primeira Janela Modal</h1>
-    </header>
-    <article>
-        <div class="janela">
-            <ul>
-                <li>Frota de Carros</li>
-                <li>Ações</li>
-            </ul>
-            <a href="#modal">Cadastrar</a>
-            <hr>
+    <button onclick="cadastrar()">cadastre-se</button>
+    <div id="modal" class="parte-escura">
+        <div class="janela-modal">
+            <button onclick="sair()">cadastre-se</button>
         </div>
 
-        <div id="modal" class="modalDialog">
-            <div class="area-modal">
-                <a href="#close" title="close" class="closeModal"></a>
-                <form action="" method="post">
-                    <h2>Preencha o Formulário</h2>
-                    <hr>
-                    <ul>
-                        <li>
-                            <select name="modeloVeiculos" id="modeloVeiculos">
-                                <option value="">car1</option>
-                                <option value="">car2</option>
-                                <option value="">car3</option>
-                                <option value="">car4</option>
-                                <option value="">car5</option>
-                            </select>
-                        </li>
-                        <li>
-                            <input type="text" name="nome" placeholder="Dige o Nome Completo">
-                        </li>
-                        <li>
-                            <input type="email" name="email" placeholder="Digite seu Email">
-                        </li>
-                        <li>
-                            <input type="number" placeholder="DD" id="dd" max="2">
-                            <input type="number" name="numero" placeholder="Digite o numero de Celular">
-                        </li>
-                        <li>
-                            <input type="text" name="cpf" placeholder="Digite o CPF">
-                        </li>
-                        <li>
-                            <input type="text" name="rg" placeholder="Digite o RG">
-                        </li>
-                        <li>
-                            <input type="text" name="placa" id="placa" placeholder="Digite a Placa do veiculo">
-                        </li>
-
-                        <li></li>
-                        <li></li>
-
-                    </ul>
-
-
-
-
-
-
-
-
-
-                    <button type="submit">Enviar</button>
-                </form>
-
-            </div>
-        </div>
-    </article>
-
-
-
-    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
-    <script src=""></script>
+    </div>
 </body>
+<script src="js/cadastro.js"></script>
 
 </html>
